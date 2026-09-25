@@ -235,6 +235,9 @@ process PREPARE_QTL_PHENOTYPES {
 
     script:
     """
+    export NUMBA_CACHE_DIR="\$PWD/.numba_cache"
+    mkdir -p "\$NUMBA_CACHE_DIR"
+
     prepare_qtl_phenotypes.py \\
         ${adata} \\
         ${regions} \\
