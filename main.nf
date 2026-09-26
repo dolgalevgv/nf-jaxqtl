@@ -318,7 +318,7 @@ process JAXQTL_NOMINAL {
         --covar ${covariates} \\
         --offset ${offset} \\
         --model nb \\
-        --test score \\
+        --test wald \\
         --window ${params.cis_window} \\
         --tss-centered \\
         --min-gene-expr-pct ${params.min_gene_expr_pct} \\
