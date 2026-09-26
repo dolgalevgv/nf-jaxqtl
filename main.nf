@@ -308,7 +308,7 @@ process JAXQTL_NOMINAL {
     tuple path(vcf), path(vcf_index)
 
     output:
-    tuple val(phenotype_name), path("${phenotype_name}.nominal.score.parquet.gz"), emit: nominal
+    tuple val(phenotype_name), path("${phenotype_name}.nominal.wald.parquet.gz"), emit: nominal
 
     script:
     """
