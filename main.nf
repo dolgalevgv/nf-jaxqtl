@@ -284,7 +284,7 @@ process JAXQTL_CIS_GENES {
         --vcf ${vcf} \\
         --pheno ${phenotype} \\
         --covar ${covariates} \\
-        --offset ${offset} \\
+        --set-offset-from-libsize \\
         --model nb \\
         --test score \\
         --window ${params.cis_window} \\
@@ -316,7 +316,7 @@ process JAXQTL_NOMINAL {
         --vcf ${vcf} \\
         --pheno ${phenotype} \\
         --covar ${covariates} \\
-        --offset ${offset} \\
+        --set-offset-from-libsize \\
         --model nb \\
         --test wald \\
         --window ${params.cis_window} \\
