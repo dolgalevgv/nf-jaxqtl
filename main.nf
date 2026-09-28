@@ -370,7 +370,7 @@ workflow {
             tuple(name, pheno, pheno.resolveSibling("${name}.offset.tsv"))
         }
 
-    JAXQTL_COMPUTE_PCS(ch_phenotypes.take(1), PREPARE_COVARIATES.out)
+    JAXQTL_COMPUTE_PCS(ch_phenotypes, PREPARE_COVARIATES.out)
     JAXQTL_CIS_GENES(JAXQTL_COMPUTE_PCS.out, BCFTOOLS_INDEX.out.vcf)
     JAXQTL_NOMINAL(JAXQTL_COMPUTE_PCS.out, BCFTOOLS_INDEX.out.vcf)
 }
