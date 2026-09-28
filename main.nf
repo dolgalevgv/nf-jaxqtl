@@ -99,7 +99,7 @@ process BCFTOOLS_VARIANT_QC {
         --min-alleles 2 \\
         --max-alleles 2 \\
         --types snps \\
-        --rm-dup id \\
+        --rm-dup \\
         --output-type z \\
         --output ${vcf.getBaseName(2)}_filt.vcf.gz
     """
